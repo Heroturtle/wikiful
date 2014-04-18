@@ -1,0 +1,6 @@
+<div>
+  <h1><%= @category.name %></h1>
+  <p>Articles listed unter this category: <br><% @category.articles.each do |category| %>
+    <%= category.title %><br><% end %>
+  </p>
+ </div>
