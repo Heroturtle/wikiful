@@ -1,2 +1,10 @@
 <h1>Welcome to Wikiful</h1>
-<p>This is a placeholder for our landing page. Eventually we'll put something cooler here!</p>
+<p>Her are some recent recent_articles:</p>
+	<% @recent_recent_articles.each do |recent_article| %>
+	<p><%= link_to recent_article.title, recent_article %></p>
+	<p>publication date: <%= recent_article.created_at %></p>
+	<p>Category: <% recent_article.categories.each do |category| %>
+		<%= category.name %> </p>
+		<% end %>
+ 	<p><%= truncate(recent_article.content, length: 100) %></p>
+<% end %>

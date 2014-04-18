@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-  end
+end
 
   def new
     @article = Article.new

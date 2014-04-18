@@ -41,6 +41,10 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
+gem 'twitter-bootstrap-rails'
+gem 'less-rails'
+gem 'therubyracer'
+
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 

@@ -6,3 +6,9 @@
   </p>
   <div><%= @article.content %></div>
 </div>
+<% if @anyVariable.nil? %>
+	<%= "it's not there" %>
+	<% else %>
+	<%= "it's there" %>
+	<% end %>
+
