@@ -7,8 +7,6 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-end
-
   def new
     @article = Article.new
   end
@@ -16,9 +14,10 @@ end
   def create
     @article = Article.new(article_params)
       if @article.save
-        redirect_to @article
+        redirect_to @article, notice: 'Your article has been published!'
       else
         render "new"
+    end
   end
 
   private

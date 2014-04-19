@@ -49,3 +49,4 @@ gem 'therubyracer'
 # gem 'debugger', group: [:development, :test]
 
 gem 'faker'
+gem 'bcrypt-ruby', '~> 3.0.0'
