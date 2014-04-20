@@ -1,16 +1,21 @@
 class ArticlesController < ApplicationController
+  
+  before_filter :authorize, only: [:new]
   def index
 	 @articles = Article.order(updated_at: :desc).limit(25)
   end
   
+  before_filter :authorize, only: [:new]
   def show
     @article = Article.find(params[:id])
   end
 
+  before_filter :authorize, only: [:new]
   def new
     @article = Article.new
   end
 
+  before_filter :authorize, only: [:new]
   def create
     @article = Article.new(article_params)
       if @article.save

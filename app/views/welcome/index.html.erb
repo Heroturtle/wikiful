@@ -1,6 +1,6 @@
 <h1>Welcome to Wikiful</h1>
 <p>Her are some recent recent_articles:</p>
-	<% @recent_recent_articles.each do |recent_article| %>
+	<% @recent_articles.each do |recent_article| %>
 	<p><%= link_to recent_article.title, recent_article %></p>
 	<p>publication date: <%= recent_article.created_at %></p>
 	<p>Category: <% recent_article.categories.each do |category| %>
